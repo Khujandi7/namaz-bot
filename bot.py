@@ -5,7 +5,7 @@ from telegram import Update, ReplyKeyboardMarkup, KeyboardButton, InlineKeyboard
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes, CallbackQueryHandler
 
 import os
-TELEGRAM_TOKEN = os.environ.get("8310040854:AAErjFHScAPPQfS78OELoGkAuVm3rkTpWQM")
+TELEGRAM_TOKEN = os.environ.get 8310040854:AAErjFHScAPPQfS78OELoGkAuVm3rkTpWQM 
 ```
 
 logging.basicConfig(level=logging.INFO)
@@ -310,3 +310,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
