@@ -4,11 +4,9 @@ from datetime import datetime
 from telegram import Update, ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes, CallbackQueryHandler
 
-# ════════════════════════════════════
-# 🔑 ВСТАВЬ СВОИ ТОКЕНЫ СЮДА
-# ════════════════════════════════════
-TELEGRAM_TOKEN = "8310040854:AAGX4e2KMx4X7AqkHfHX3mwXIcZzJ7qBbrw"
-# ════════════════════════════════════
+import os
+TELEGRAM_TOKEN = os.environ.get("8310040854:AAErjFHScAPPQfS78OELoGkAuVm3rkTpWQM")
+```
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -310,4 +308,5 @@ def main():
     app.run_polling()
 
 if __name__ == "__main__":
+
     main()
