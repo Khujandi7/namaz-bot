@@ -5,7 +5,11 @@ from telegram import Update, ReplyKeyboardMarkup, KeyboardButton, InlineKeyboard
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes, CallbackQueryHandler
 
 import os
-TELEGRAM_TOKEN = os.environ.get("8310040854:AAErjFHScAPPQfS78OELoGkAuVm3rkTpWQM")
+
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+
+if not TELEGRAM_TOKEN:
+    raise RuntimeError("TELEGRAM_TOKEN is missing")
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -307,7 +311,4 @@ def main():
     app.run_polling()
 
 if __name__ == "__main__":
-
     main()
-
-
